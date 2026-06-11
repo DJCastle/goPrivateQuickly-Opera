@@ -28,7 +28,7 @@ export async function openHardenedSession(hardenedSet) {
     const win = await chrome.windows.create({ incognito: true, focused: false });
     windowId = win.id;
   } catch {
-    return { ok: false, reason: "window-failed", windowId: null, allowed: false, results: [] };
+    return { ok: false, reason: "window-failed", windowId: null, allowed: false };
   }
 
   let allowed = false;
@@ -40,27 +40,21 @@ export async function openHardenedSession(hardenedSet) {
   if (!allowed) {
     // The window opened, but the extension can't run in / control private
     // mode until the user enables it. Skip applying so we never half-apply.
-    return { ok: true, windowId, allowed: false, results: [] };
+    return { ok: true, windowId, allowed: false };
   }
 
-  const adapter = chromiumAdapter;
-  const results = [];
+  // Apply each protection in order. applyOne reports its own failures and
+  // never throws meaningfully; the guard is belt-and-suspenders so one bad
+  // setting can't abort the rest of the list.
   for (const entry of hardenedSet) {
-    let outcome;
     try {
-      outcome = await adapter.applyOne(entry);
+      await chromiumAdapter.applyOne(entry);
     } catch {
-      outcome = { status: "failed" };
+      // Ignore — continue with the next setting.
     }
-    results.push({
-      id: entry.id,
-      label: entry.label,
-      advanced: Boolean(entry.advanced),
-      status: outcome.status,
-    });
   }
 
-  return { ok: true, windowId, allowed: true, results };
+  return { ok: true, windowId, allowed: true };
 }
 
 export async function focusWindow(windowId) {
