@@ -56,7 +56,7 @@ of those.
 
 - **Opera:** install from the
   [Opera add-ons store](https://addons.opera.com/). _(Store listing
-  pending v1.0.)_
+  pending review.)_
 
 Using Chrome or another Chromium browser? See
 [goPrivateQuickly-Chromium](https://github.com/DJCastle/goPrivateQuickly-Chromium).
