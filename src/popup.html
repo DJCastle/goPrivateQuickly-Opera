@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Go Private Quickly</title>
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="popup">
+    <header>
+      <h1>Go Private Quickly</h1>
+    </header>
+
+    <!-- Primary actions -->
+    <div id="actions" class="actions">
+      <button id="open-hardened" class="btn btn-primary" type="button" autofocus>
+        Open Hardened Private Window
+      </button>
+      <p id="hardened-blurb" class="blurb">
+        Hardened mode tightens supported privacy settings for the private
+        session only, then lets the browser restore them when it closes.
+        <a class="learn-link"
+           href="https://codecraftedapps.com/extensions/go-private-quickly/hardening.html"
+           target="_blank" rel="noopener noreferrer">What hardened mode does &rarr;</a>
+      </p>
+      <button id="open-private" class="btn btn-outline" type="button">
+        Standard Private Window
+      </button>
+      <button id="open-settings" class="btn btn-secondary" type="button">Settings</button>
+    </div>
+
+    <!-- Always-visible privacy explanation -->
+    <footer class="explainer">
+      <p>
+        Private browsing reduces traces saved on this device. It doesn't make
+        you anonymous online &mdash; a trusted VPN can add network privacy.
+        <a class="learn-link"
+           href="https://codecraftedapps.com/extensions/go-private-quickly/"
+           target="_blank" rel="noopener noreferrer">What private mode does &amp; doesn't do &rarr;</a>
+      </p>
+    </footer>
+  </main>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

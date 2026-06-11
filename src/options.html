@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Go Private Quickly — Options</title>
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Go Private Quickly</h1>
+      <p class="subtitle">1.0.0 &middot; Settings</p>
+    </header>
+
+    <section aria-labelledby="hardened-heading">
+      <h2 id="hardened-heading">Hardened Private Mode</h2>
+      <p class="section-intro">
+        Hardened Private Mode opens a private window and tightens supported
+        privacy settings for that private session only. On Chromium browsers
+        the browser restores them automatically when the last private window
+        closes. Settings that cannot be confined to the private session are
+        reported as unavailable rather than changed.
+      </p>
+      <p class="section-intro">
+        <a href="https://codecraftedapps.com/extensions/go-private-quickly/hardening.html"
+           target="_blank" rel="noopener noreferrer">See every protection, why each was chosen,
+          and how it reverts automatically &rarr;</a>
+      </p>
+    </section>
+
+    <section aria-labelledby="advanced-heading">
+      <details class="advanced">
+        <summary id="advanced-heading">Advanced settings</summary>
+        <p class="section-intro">
+          These options are off by default. Each may break websites or common
+          browser features &mdash; turn them on only if you understand the
+          trade-off.
+        </p>
+
+        <label class="toggle">
+          <input type="checkbox" id="adv-strict-webrtc">
+          <span class="toggle-text">
+            <span class="toggle-title">Strict WebRTC routing (proxy_only)</span>
+            <span class="toggle-warning">
+              Strict WebRTC routing may prevent browser-based calls, video
+              meetings, and some websites from working correctly.
+            </span>
+          </span>
+        </label>
+
+        <label class="toggle">
+          <input type="checkbox" id="adv-disable-webrtc">
+          <span class="toggle-text">
+            <span class="toggle-title">Disable WebRTC entirely</span>
+            <span class="toggle-warning">
+              Disabling WebRTC may prevent browser-based calls, video meetings,
+              screen sharing, and other real-time communication features from
+              working.
+            </span>
+            <span class="toggle-note" id="adv-disable-webrtc-note"></span>
+          </span>
+        </label>
+
+        <label class="toggle">
+          <input type="checkbox" id="adv-disable-referrers">
+          <span class="toggle-text">
+            <span class="toggle-title">Disable referrer headers</span>
+            <span class="toggle-warning">
+              Disabling referrer headers may break some websites, sign-in
+              flows, and payment pages. It can also make your browser
+              configuration more unusual.
+            </span>
+          </span>
+        </label>
+      </details>
+    </section>
+
+    <section aria-labelledby="help-heading" class="help">
+      <h2 id="help-heading">Help &amp; support</h2>
+      <ul class="links">
+        <li>
+          <a href="https://codecraftedapps.com/extensions/go-private-quickly/"
+             target="_blank" rel="noopener noreferrer">
+            codecraftedapps.com/extensions
+          </a>
+        </li>
+        <li>
+          <a href="mailto:support@codecraftedapps.com">
+            support@codecraftedapps.com
+          </a>
+        </li>
+      </ul>
+      <p class="legal">
+        Go Private Quickly does not collect, store, or transmit any
+        personal data. No analytics, no tracking, no network requests.
+        <a href="https://codecraftedapps.com/extensions/go-private-quickly/privacy.html"
+           target="_blank" rel="noopener noreferrer">Privacy policy</a>
+        &middot;
+        <a href="https://codecraftedapps.com/extensions/go-private-quickly/terms.html"
+           target="_blank" rel="noopener noreferrer">Terms</a>
+      </p>
+    </section>
+
+    <footer>
+      <span id="saved-indicator" role="status" aria-live="polite">Saved</span>
+    </footer>
+  </main>
+
+  <script type="module" src="options-advanced.js"></script>
+</body>
+</html>

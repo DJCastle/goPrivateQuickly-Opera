@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome — Go Private Quickly</title>
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="onboarding.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Welcome to Go Private Quickly</h1>
+      <p class="lede">
+        One click opens a new private/incognito window &mdash; with an optional
+        hardened mode that tightens privacy settings for that session.
+      </p>
+    </header>
+
+    <section id="permission-section" aria-labelledby="permission-heading">
+      <h2 id="permission-heading">Private-mode access</h2>
+
+      <p class="why">
+        Browsers keep extensions <strong>switched off in private/incognito
+        windows by default</strong> &mdash; it's a privacy safeguard, so add-ons
+        can't quietly watch your private browsing. Go Private Quickly's whole
+        job is to open and harden that private window, so it needs your
+        go-ahead to work there. It's a one-time switch, and GPQ still collects
+        nothing &mdash; no tracking, no data, no network requests.
+      </p>
+
+      <div id="permission-pending" hidden>
+        <p>Checking your settings&hellip;</p>
+      </div>
+
+      <div id="permission-granted" hidden>
+        <p class="status success">
+          <span class="status-icon" aria-hidden="true">&#10003;</span>
+          <strong>You're all set.</strong>
+          GPQ can open and run inside private windows. You can close this tab
+          &mdash; just click the GPQ icon whenever you want a private window.
+        </p>
+      </div>
+
+      <div id="permission-missing" hidden>
+        <p class="status warning">
+          <span class="status-icon" aria-hidden="true">!</span>
+          <strong>One quick step</strong> before GPQ can open private
+          windows on this browser.
+        </p>
+
+        <ol class="steps">
+          <li>
+            <button id="open-settings-page" type="button" class="primary">
+              Open settings
+            </button>
+          </li>
+          <li id="step-toggle"></li>
+          <li>
+            That's it &mdash; flipping that switch finishes setup. You don't
+            need to return to this page; it updates on its own, and may close
+            or refresh by itself. Then just click the GPQ icon to open a
+            private window.
+          </li>
+        </ol>
+
+        <div id="manual-fallback" hidden>
+          <p class="fallback-note">
+            If a new tab didn't open, paste this into your address bar instead:
+          </p>
+          <div class="copy-row">
+            <code id="settings-url"></code>
+            <button id="copy-url" type="button">Copy</button>
+          </div>
+        </div>
+
+        <p class="recheck-note">
+          Still seeing these steps after flipping the switch?
+          <button id="recheck" type="button">Re-check</button>
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="quickstart-heading">
+      <h2 id="quickstart-heading">Quick start</h2>
+      <ul class="quickstart">
+        <li>Click the GPQ icon in the toolbar, then choose Standard or Hardened.</li>
+        <li>Hardened tightens privacy settings for that session only.</li>
+        <li>Advanced options live in Settings.</li>
+      </ul>
+      <button id="open-options" type="button" class="primary">Open Settings</button>
+    </section>
+
+    <section aria-labelledby="privacy-heading">
+      <h2 id="privacy-heading">What private mode does &amp; doesn't do</h2>
+      <ul class="quickstart">
+        <li>
+          <strong>It does</strong> stop this browser from saving your history,
+          cookies, and form entries once the private window closes.
+        </li>
+        <li>
+          <strong>It doesn't</strong> make you anonymous online. Websites you
+          visit, your internet provider, your employer, or your network
+          administrator may still see your activity.
+        </li>
+        <li>
+          <strong>Want network privacy too?</strong> Connect a trusted VPN
+          before browsing. GPQ never inspects, verifies, or controls VPN
+          software &mdash; that's just a suggestion.
+        </li>
+        <li>
+          Files you download during private browsing stay on your computer
+          after the window closes.
+        </li>
+      </ul>
+      <p>
+        <a href="https://codecraftedapps.com/extensions/go-private-quickly/"
+           target="_blank" rel="noopener noreferrer">
+          Read more on the website &rarr;
+        </a>
+      </p>
+    </section>
+
+    <footer>
+      <p class="legal">
+        Go Private Quickly does not collect, store, or transmit any
+        personal data. No analytics, no tracking, no network requests.
+      </p>
+      <p class="links">
+        <a href="https://codecraftedapps.com/extensions/go-private-quickly/"
+           target="_blank" rel="noopener noreferrer">
+          codecraftedapps.com/extensions
+        </a>
+        &middot;
+        <a href="mailto:support@codecraftedapps.com">
+          support@codecraftedapps.com
+        </a>
+      </p>
+    </footer>
+  </main>
+
+  <script src="onboarding.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* Layout-specific styles for the onboarding page. Theme tokens + base
+   resets come from theme.css (linked first in onboarding.html). */
+
+main {
+  max-width: 640px;
+  margin: 48px auto;
+  padding: 0 24px 48px;
+}
+
+header { margin-bottom: 32px; }
+h1 { margin: 0 0 8px; font-size: 28px; font-weight: 700; }
+.lede { margin: 0; font-size: 16px; color: var(--text-muted); line-height: 1.5; }
+
+section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+h2 {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.why {
+  margin: 0 0 16px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.status {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0 0 8px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.status-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-weight: 700;
+}
+.status.success { background: rgba(16, 185, 129, 0.12); }
+.status.success .status-icon { background: rgb(16, 185, 129); color: white; }
+.status.warning { background: rgba(245, 158, 11, 0.12); }
+.status.warning .status-icon { background: rgb(245, 158, 11); color: white; }
+
+.steps { margin: 14px 0 18px; padding-left: 22px; line-height: 1.6; }
+.steps li { margin: 8px 0; }
+
+.recheck-note {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.fallback-note { margin: 0 0 6px; font-size: 13px; color: var(--text-muted); }
+#manual-fallback { margin: 0 0 14px; }
+
+.copy-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+}
+.copy-row code {
+  flex: 1;
+  padding: 6px 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 12px;
+  word-break: break-all;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 120ms ease;
+  background: var(--secondary-bg);
+  color: var(--text);
+  border-color: var(--border);
+}
+button:hover { background: var(--secondary-hover); }
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button.primary { background: var(--accent); color: var(--accent-text); border-color: transparent; }
+button.primary:hover { background: var(--accent-hover); }
+
+.quickstart { margin: 0 0 16px; padding-left: 22px; line-height: 1.6; }
+.quickstart li { margin: 6px 0; }
+
+footer { margin-top: 24px; text-align: center; }
+.legal { margin: 0 0 8px; font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+.links { margin: 0; font-size: 12px; }
+.links a { color: var(--accent); text-decoration: none; }
+.links a:hover { text-decoration: underline; }

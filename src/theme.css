@@ -1,0 +1,63 @@
+/* Shared theme tokens and base resets for every in-extension page
+   (popup, options, onboarding). Each page's own CSS layers
+   layout-specific rules on top. */
+
+:root {
+  --bg: #ffffff;
+  --surface: #f9fafb;
+  --border: #e5e7eb;
+  --text: #1f2937;
+  --text-muted: #6b7280;
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+  --accent-text: #ffffff;
+  --secondary-bg: #f3f4f6;
+  --secondary-hover: #e5e7eb;
+  --focus-ring: rgba(99, 102, 241, 0.35);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1f2937;
+    --surface: #374151;
+    --border: #4b5563;
+    --text: #e5e7eb;
+    --text-muted: #9ca3af;
+    --accent: #818cf8;
+    --accent-hover: #a5b4fc;
+    --accent-text: #1f2937;
+    --secondary-bg: #374151;
+    --secondary-hover: #4b5563;
+    --focus-ring: rgba(129, 140, 248, 0.45);
+  }
+}
+
+/* Adopt the operating system's accent color where the browser exposes it
+   (the color you pick in macOS System Settings → Appearance, or the Windows
+   accent). Browsers that don't understand the AccentColor keyword keep the
+   indigo fallback above — this whole block is ignored there. */
+@supports (color: AccentColor) {
+  :root {
+    --accent: AccentColor;
+    --accent-hover: AccentColor;
+    --accent-text: AccentColorText;
+  }
+}
+
+/* Tell the browser our pages support both schemes so it themes native bits
+   (scrollbars, form controls, focus rings) to match the system too. */
+:root { color-scheme: light dark; }
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
