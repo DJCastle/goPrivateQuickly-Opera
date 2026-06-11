@@ -30,8 +30,8 @@ changed and security protections are never touched. Optional advanced
 toggles (strict/disabled WebRTC, no referrer headers) are off by default.
 
 The toolbar icon also reflects whether the currently focused window is
-private — a muted silver mask when you're in a normal window, a vivid
-purple-and-yellow mask when you're in a private one.
+private — a vivid purple-and-gold mask when you're in a normal window, a
+muted silver mask when you're in a private (secure) one.
 
 ## What it does NOT do
 

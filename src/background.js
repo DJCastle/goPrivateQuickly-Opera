@@ -2,7 +2,7 @@
 //
 // Responsibilities:
 //   - Toolbar icon reflects whether the currently focused window is private
-//     (active/indigo when private, inactive/gray otherwise).
+//     (muted silver mask when private, colorful otherwise).
 //   - On first install, open the onboarding page once.
 //
 // The toolbar click opens the popup (manifest "action.default_popup"), which
