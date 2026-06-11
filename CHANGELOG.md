@@ -5,6 +5,19 @@ All notable changes to this extension are documented in this file.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 Version scheme: [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.5] — 2026-06-11
+
+### Changed
+
+- Refreshed the toolbar mask artwork. A muted silver "secure" mask now marks
+  private / Hardened windows; the vivid purple-and-gold mask marks normal
+  windows (and is the store listing icon).
+
+### Fixed
+
+- Corrected documentation that described the toolbar icon's colors in reverse
+  (it previously said the colorful mask appeared in private windows).
+
 ## [1.0.0] — 2026-06-11
 
 First Opera release. Ported from the Chromium build for a first-party
@@ -39,4 +52,5 @@ Opera add-ons store listing.
   no remote code. Requests `storage` and `privacy` only. Strict Content
   Security Policy.
 
+[1.1.5]: https://github.com/DJCastle/goPrivateQuickly-Opera/releases/tag/gpq-v1.1.5
 [1.0.0]: https://github.com/DJCastle/goPrivateQuickly-Opera/releases/tag/gpq-v1.0.0
